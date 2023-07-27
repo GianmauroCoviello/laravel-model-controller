@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use app\http\Controllers\ControllerComics as ControllerComics;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +13,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ControllerComics::class, 'index']);
